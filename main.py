@@ -1,4 +1,5 @@
 import pygame
+import sys
 from constants import *
 from circleshape import *
 from player import Player
@@ -35,6 +36,10 @@ def main():
         for sprite in drawable:
             sprite.draw(screen)
         updatable.update(dt)
+        for asteroid in asteroids:
+            if asteroid.collision_detected(player) == True:
+                print("Game over!")
+                sys.exit()
         pygame.display.flip()
 
         # FPS Control
