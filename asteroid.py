@@ -12,3 +12,6 @@ class Asteroid(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
+
+    def kill(self):
+        pygame.sprite.Sprite.kill(self)
