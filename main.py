@@ -5,6 +5,7 @@ from circleshape import *
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+from shot import Shot
 
 run_game = True
 
@@ -21,6 +22,7 @@ def main():
     AsteroidField.containers = (updatable,)
     Asteroid.containers = (updatable, drawable, asteroids)
     Player.containers = (updatable, drawable)
+    Shot.containers = (updatable, drawable)
     
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     asteroidfield = AsteroidField()
